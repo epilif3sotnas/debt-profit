@@ -1,18 +1,26 @@
-## About debt-profit
+.. |nbsp| unicode:: 0xA0
+   :trim:
+
+
+About debt-profit
+=================
 
 This little calculator was done with the goal of learning Zig programming language and also to create a calculator to check if a certain loan is profitable when invested against investing an amount of X every month.
 
-&nbsp;
+|nbsp|
 
 
-## Requirements
+Requirements
+############
 
-#### Zig => build.zig.zon
+Zig => build.zig.zon
+*************************
 
-&nbsp;
+|nbsp|
 
 
-## Run
+Run
+###
 
 Commands to run the project:
 
@@ -22,7 +30,7 @@ zig build;
 ./zig.out/bin/debt-profit;
 ```
 
-&nbsp;
+|nbsp|
 
 
 ## License
