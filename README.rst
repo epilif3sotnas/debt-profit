@@ -13,8 +13,7 @@ This little calculator was done with the goal of learning Zig programming langua
 Requirements
 ############
 
-Zig => build.zig.zon
-^^^^^^^^^^^^^^^^^^^^
+**Zig => build.zig.zon**
 
 |nbsp|
 
