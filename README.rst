@@ -14,7 +14,7 @@ Requirements
 ############
 
 Zig => build.zig.zon
-""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
 
 |nbsp|
 
@@ -24,11 +24,11 @@ Run
 
 Commands to run the project:
 
-```
-cd {PATH_REPOSITORY};
-zig build;
-./zig.out/bin/debt-profit;
-```
+.. code-block:: bash
+
+    cd {PATH_REPOSITORY};
+    zig build;
+    ./zig.out/bin/debt-profit;
 
 |nbsp|
 
