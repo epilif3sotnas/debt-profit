@@ -14,7 +14,7 @@ Requirements
 ############
 
 Zig => build.zig.zon
-*************************
+--------------------
 
 |nbsp|
 
@@ -33,6 +33,7 @@ zig build;
 |nbsp|
 
 
-## License
+License
+#######
 
 Licensed under Apache-2.0 license.
