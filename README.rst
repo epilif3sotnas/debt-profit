@@ -32,7 +32,30 @@ Commands to run the project:
 
 .. list-table:: Investment Command Args
     :header-rows: 1
-    :widths: 50 50
+
+    *   - Column 1
+        - Column 2
+    *   - Row 1
+        - Value 1
+    *   - Row 2
+        - Value 2
+    *   - Row 3
+        - Value 3
+
+.. list-table:: Debt Command Args
+    :header-rows: 1
+
+    *   - Column 1
+        - Column 2
+    *   - Row 1
+        - Value 1
+    *   - Row 2
+        - Value 2
+    *   - Row 3
+        - Value 3
+
+.. list-table:: Both Command Args
+    :header-rows: 1
 
     *   - Column 1
         - Column 2
