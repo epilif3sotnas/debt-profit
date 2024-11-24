@@ -1,17 +1,18 @@
+// internal
 const Command = @import("../../cli/commands.zig").Command;
 
 
 pub const ArgsInvestment = struct {
     starting_amount: f64,
-    duration: u32,              // duration in months
+    contribution: f64,          // monthly contribution
     apy: f32,
-    contribution: f32,          // monthly contribution
+    duration: u16,              // duration in months
 };
 
 pub const ArgsDebt = struct {
     amount: f64,
-    duration: u32,              // duration in months
     interest: f32,
+    duration: u16,              // duration in months
 };
 
 pub const Args = struct {
