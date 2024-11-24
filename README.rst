@@ -30,6 +30,8 @@ Commands to run the project:
     zig build run -- investment --starting-amount=10 --duration=12 --apy=10.2 --contribution=100;
     zig build run -- debt --amount=100 --duration=12 --interest=12.2;
 
+|nbsp|
+
 
 .. list-table:: Investment Command Args
     :header-rows: 1
