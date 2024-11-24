@@ -30,41 +30,53 @@ Commands to run the project:
     zig build run -- investment --starting-amount=10 --duration=12 --apy=10.2 --contribution=100;
     zig build run -- debt --amount=100 --duration=12 --interest=12.2;
 
+
 .. list-table:: Investment Command Args
     :header-rows: 1
 
-    *   - Column 1
-        - Column 2
-    *   - Row 1
-        - Value 1
-    *   - Row 2
-        - Value 2
-    *   - Row 3
-        - Value 3
+    *   - Arg
+        - Data Type
+    *   - starting-amount
+        - f64
+    *   - contribution
+        - f64
+    *   - duration
+        - f32
+    *   - apy
+        - u16
 
 .. list-table:: Debt Command Args
     :header-rows: 1
 
-    *   - Column 1
-        - Column 2
-    *   - Row 1
-        - Value 1
-    *   - Row 2
-        - Value 2
-    *   - Row 3
-        - Value 3
+    *   - Arg
+        - Data Type
+    *   - amount
+        - f64
+    *   - interest
+        - f32
+    *   - duration
+        - u16
 
 .. list-table:: Both Command Args
     :header-rows: 1
 
-    *   - Column 1
-        - Column 2
-    *   - Row 1
-        - Value 1
-    *   - Row 2
-        - Value 2
-    *   - Row 3
-        - Value 3
+    *   - Arg
+        - Data Type
+    *   - starting-amount
+        - f64
+    *   - contribution
+        - f64
+    *   - duration
+        - f32
+    *   - apy
+        - u16
+    *   - amount
+        - f64
+    *   - interest
+        - f32
+    *   - duration
+        - u16
+
 
 |nbsp|
 
