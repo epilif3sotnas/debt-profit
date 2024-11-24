@@ -27,8 +27,21 @@ Commands to run the project:
 
     cd {PATH_REPOSITORY};
     zig build run -- both --starting-amount=10 --debt-amount=100 --duration=12 --apy=10.2 --interest=12.2 --contribution=100;
-    zig build run -- investment --starting-amount=10 --debt-amount=100 --duration=12 --apy=10.2 --interest=12.2 --contribution=100;
-    zig build run -- debt --starting-amount=10 --debt-amount=100 --duration=12 --apy=10.2 --interest=12.2 --contribution=100;
+    zig build run -- investment --starting-amount=10 --duration=12 --apy=10.2 --contribution=100;
+    zig build run -- debt --amount=100 --duration=12 --interest=12.2;
+
+.. list-table::
+    :header-rows: 1
+    :widths: 50 50
+
+    * - Column 1
+        - Column 2
+    * - Row 1
+        - Value 1
+    * - Row 2
+        - Value 2
+    * - Row 3
+        - Value 3
 
 |nbsp|
 
