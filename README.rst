@@ -34,13 +34,13 @@ Commands to run the project:
     :header-rows: 1
     :widths: 50 50
 
-    * - Column 1
+    *   - Column 1
         - Column 2
-    * - Row 1
+    *   - Row 1
         - Value 1
-    * - Row 2
+    *   - Row 2
         - Value 2
-    * - Row 3
+    *   - Row 3
         - Value 3
 
 |nbsp|
