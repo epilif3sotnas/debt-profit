@@ -3,7 +3,12 @@
     .version = "0.0.1",
     .minimum_zig_version = "0.13.0",
 
-    .dependencies = .{},
+    .dependencies = .{
+        .yazap = .{
+            .url = "git+https://github.com/prajwalch/yazap#e9293645250e2bc172f100bb0467aea55b1d4f3e",
+            .hash = "12204e5a58b533fabc5ba5617552dd1d9b6f50d0807952806ac1e4360f1be55024eb",
+        },
+    },
 
     .paths = .{
         "src",
