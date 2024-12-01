@@ -135,7 +135,7 @@ fn getCommandArgs(allocator: Allocator) !Args {
                 .args_investment = ArgsInvestment {
                     .starting_amount = try std.fmt.parseFloat(f64, argsValues[0]),
                     .contribution = try std.fmt.parseFloat(f64, argsValues[3]),
-                    .apy = try std.fmt.parseFloat(f32, argsValues[2]),
+                    .apy = try std.fmt.parseFloat(f32, argsValues[2])/100,
                     .duration = try std.fmt.parseUnsigned(u16, argsValues[1], 10),
                 }
             };
@@ -160,7 +160,7 @@ fn getCommandArgs(allocator: Allocator) !Args {
                 .command = command,
                 .args_debt = ArgsDebt {
                     .amount = try std.fmt.parseFloat(f64, argsValues[0]),
-                    .interest = try std.fmt.parseFloat(f32, argsValues[2]),
+                    .interest = try std.fmt.parseFloat(f32, argsValues[2])/100,
                     .duration = try std.fmt.parseUnsigned(u16, argsValues[1], 10),
                 }
             };
@@ -198,14 +198,14 @@ fn getCommandArgs(allocator: Allocator) !Args {
 
                 .args_debt = ArgsDebt {
                     .amount = try std.fmt.parseFloat(f64, argsValues[0]),
-                    .interest = try std.fmt.parseFloat(f32, argsValues[4]),
+                    .interest = try std.fmt.parseFloat(f32, argsValues[4])/100,
                     .duration = try std.fmt.parseUnsigned(u16, argsValues[2], 10),
                 },
 
                 .args_investment = ArgsInvestment {
                     .starting_amount = try std.fmt.parseFloat(f64, argsValues[1]),
                     .contribution = try std.fmt.parseFloat(f32, argsValues[5]),
-                    .apy = try std.fmt.parseFloat(f32, argsValues[3]),
+                    .apy = try std.fmt.parseFloat(f32, argsValues[3])/100,
                     .duration = try std.fmt.parseUnsigned(u16, argsValues[2], 10),
                 },
             };
