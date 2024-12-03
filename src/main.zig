@@ -8,6 +8,7 @@ const ArgsInvestment = @import("core/cli/model.zig").ArgsInvestment;
 const ArgsDebt = @import("core/cli/model.zig").ArgsDebt;
 const ArgsBoth = @import("core/cli/model.zig").ArgsBoth;
 const InvestmentCalculator = @import("investment/investment.zig").InvestmentCalculator;
+const DebtCalculator = @import("debt/debt.zig").DebtCalculator;
 const ArgsErrors = @import("core/errors/args.zig").ArgsErrors;
 
 
@@ -39,7 +40,22 @@ pub fn main() !void {
             std.debug.print("Total Contributions: {d:.2}\n", .{ result.total_contributions });
             std.debug.print("Total Interest: {d:.2}\n", .{ result.total_interest });
         },
-        Command.DEBT => {},
+
+        Command.DEBT => {
+            if (data.args_debt == null)
+                return ArgsErrors.ArgsDoNotMatchCommandRequirements;
+
+            const debt_calculator = DebtCalculator.init();
+            defer debt_calculator.deinit();
+
+            const result = try debt_calculator.calculate(data.args_debt.?);
+
+            std.debug.print("\n\n--------- Debt Calculator ---------\n", .{});
+            std.debug.print("Total Loan Repayment: {d:.2}\n", .{ result.total_loan_repayment });
+            std.debug.print("Loan Interest: {d:.2}\n", .{ result.loan_interest });
+            std.debug.print("Monthly Payment: {d:.2}\n", .{ result.monthly_payment });
+        },
+
         Command.BOTH => {},
     }
 }
