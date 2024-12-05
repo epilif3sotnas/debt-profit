@@ -19,11 +19,10 @@ pub const DebtCalculator = struct {
                     / (1 - math.pow(f64, 1+(data.interest/12), @floatFromInt(-1*@as(i32, data.duration))));
 
         const total_loan_repayment = monthly_payment * @as(f64, @floatFromInt(data.duration));
-        const loan_interest = total_loan_repayment - data.amount;
 
         return DebtResult {
             .monthly_payment = monthly_payment,
-            .loan_interest = loan_interest,
+            .loan_interest = total_loan_repayment - data.amount,
             .total_loan_repayment = total_loan_repayment,
         };
     }

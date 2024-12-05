@@ -74,12 +74,10 @@ fn cliStruct(allocator: Allocator) !App {
     var investment_debt = app.createCommand("both", "Calculator Investment Debt.");
     try investment_debt.addArgs(
         &[_] Arg {
-            Arg.singleValueOption("starting-amount", null, "Amount when start investment."),
             Arg.singleValueOption("debt-amount", null, "Debt amount."),
             Arg.singleValueOption("duration", null, "Duration."),
             Arg.singleValueOption("apy", null, "APY of the investment."),
             Arg.singleValueOption("interest", null, "Debt interest yearly."),
-            Arg.singleValueOption("contribution", null, "Monthly contributions of the investment."),
         }
     );
     try cli.addSubcommand(investment_debt);
@@ -168,10 +166,6 @@ fn getCommandArgs(allocator: Allocator) !Args {
 
         .BOTH => {
             const argsValues = &[_] []const u8 {
-                    cli.getSingleValue("starting-amount")
-                        orelse
-                            return ArgsErrors.MissingParemeters,
-
                     cli.getSingleValue("debt-amount")
                         orelse
                             return ArgsErrors.MissingParemeters,
@@ -187,10 +181,6 @@ fn getCommandArgs(allocator: Allocator) !Args {
                     cli.getSingleValue("interest")
                         orelse
                             return ArgsErrors.MissingParemeters,
-
-                    cli.getSingleValue("contribution")
-                        orelse
-                            return ArgsErrors.MissingParemeters,
             };
 
             return Args {
@@ -198,15 +188,15 @@ fn getCommandArgs(allocator: Allocator) !Args {
 
                 .args_debt = ArgsDebt {
                     .amount = try std.fmt.parseFloat(f64, argsValues[0]),
-                    .interest = try std.fmt.parseFloat(f32, argsValues[4])/100,
-                    .duration = try std.fmt.parseUnsigned(u16, argsValues[2], 10),
+                    .interest = try std.fmt.parseFloat(f32, argsValues[3])/100,
+                    .duration = try std.fmt.parseUnsigned(u16, argsValues[1], 10),
                 },
 
                 .args_investment = ArgsInvestment {
-                    .starting_amount = try std.fmt.parseFloat(f64, argsValues[1]),
-                    .contribution = try std.fmt.parseFloat(f32, argsValues[5]),
-                    .apy = try std.fmt.parseFloat(f32, argsValues[3])/100,
-                    .duration = try std.fmt.parseUnsigned(u16, argsValues[2], 10),
+                    .starting_amount = 0,
+                    .contribution = 0,
+                    .apy = try std.fmt.parseFloat(f32, argsValues[2])/100,
+                    .duration = try std.fmt.parseUnsigned(u16, argsValues[1], 10),
                 },
             };
         },

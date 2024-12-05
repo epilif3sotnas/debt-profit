@@ -26,7 +26,7 @@ Commands to run the project:
 .. code-block:: bash
 
     cd {PATH_REPOSITORY};
-    zig build run -- both --starting-amount=10 --debt-amount=100 --duration=12 --apy=10.2 --interest=12.2 --contribution=100;
+    zig build run -- both --debt-amount=100 --duration=12 --apy=10.2 --interest=12.2;
     zig build run -- investment --starting-amount=10 --duration=12 --apy=10.2 --contribution=100;
     zig build run -- debt --amount=100 --duration=12 --interest=12.2;
 
