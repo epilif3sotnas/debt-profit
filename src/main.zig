@@ -24,7 +24,7 @@ pub fn main() !void {
 
     const data = cli.getArgs();
 
-    std.debug.print("Data: {any}\n", .{ data });
+    // std.debug.print("Data: {any}\n", .{ data });
 
     switch (data.command) {
         Command.INVESTMENT => {
